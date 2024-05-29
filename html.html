@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build from any device</title>
+    <style>
+        textarea{
+            width: 50%;
+            height: 500px;
+        }
+        #output{
+            width: 100%;
+            height: 500px;
+            background-color: whitesmoke;
+        }
+        body{
+            text-align: center;
+            color: beige;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Build from mobile</h1>
+    <br>
+    <!-- After this will be the txt area -->
+    <textarea id='code'>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+    /* CSS code */
+</style>
+</head>
+<body>
+<!-- HTML code -->
+<script>
+    //Java Script code
+</script>
+</body>
+</html></textarea><!-- Txt area is ended -->
+<br>
+<button onclick='runCode()'>Run your code</button>
+<br>
+<h1>Output</h1>
+<iframe id='output'></iframe>
+<script>
+    function runCode(){
+        var code = document.getElementById('code').value;
+        var output = document.getElementById('output');
+        output.srcdoc = code;
+    }
+</script>
+</body>
+</html>
